@@ -1,6 +1,9 @@
-import React from 'react';
-import { connect } from 'react-redux';
 
-function selectBook(book) {
-	console.log('A book has been selected', book.title);
+export function selectBook(book) {
+	//selectBook is an action and should return an action, an object with a type(always done with capital letters and underscores) and sometimes a payload property
+	return {
+		type: 'BOOK_SELECTED',
+		payload: book
+
+	};
 }
